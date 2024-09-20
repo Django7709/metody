@@ -39,7 +39,7 @@
 
             public static void printSetSystem(int clientDeviceYear, int clientDevice) {
                 String version = "";
-                if (clientDeviceYear < 2015) {
+                if (clientDeviceYear <= 2015) {
                     version = "облегченную";
                 }
                 String device = "";
