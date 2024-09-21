@@ -17,34 +17,14 @@
             }
 
             //Task 2
-            public static void recommendApplicationVersion(int clientOs, int deviceYear) {
-                System.out.println("Task 2");
-                boolean deviceIsOld = isDeviceOld(deviceYear);
-                String resultMessages= "Установите ";
-                if (deviceIsOld) {
-                    resultMessages = resultMessages + "Lite ";
-                }
-                resultMessages = resultMessages + "версию для ";
-                if (clientOs == 0) {
-                    resultMessages = resultMessages + "iOS";
-                } else {
-                    resultMessages = resultMessages + "Android";
-                }
-                System.out.println(resultMessages);
-            }
-            public static boolean isDeviceOld(int deviceYear) {
-                int currentYear = LocalDate.now().getYear();
-                return deviceYear <= currentYear;
-            }
-
             public static void printSetSystem(int clientDeviceYear, int clientDevice) {
                 String version = "";
-                if (clientDeviceYear <= 2015) {
+                if (clientDeviceYear < 2015) {
                     version = "облегченную";
                 }
                 String device = "";
                 if (clientDevice == 0) {
-                    device = "IOS";
+                    device = "iOS";
                 } else if (clientDevice == 1) {
                     device = "Android";
                 }
